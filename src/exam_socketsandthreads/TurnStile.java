@@ -21,7 +21,7 @@ public class TurnStile {
         
         Even even = new Even();
         String ip = "localhost";
-        int port = 4444;
+        int port = 3344;
         int id = 0;
         HashMap<Integer, TurnStile> stiles = new HashMap();
         
@@ -119,3 +119,25 @@ public class TurnStile {
         }
     }
 }
+
+//  COMMENTS
+//
+//  When and why we will use Threads in our programs?
+//  Når man vil udnytte at man kan arbejde på flere kerner (og dermed kører flere metoder på samme tid).
+//  Det gør også at programmer kan arbejde med nogle tungere ting i baggrunden, mens andre metoder kører.
+//
+//  Explain about the Race Condition Problem and ways to solve it in Java
+//  Race Conditionen opstår når to tråde kører og bruger samme variabler uden at tage hensyn til at den måske bliver tilgået/ændret af en anden tråd (se Even opgaven).
+//  Syncronize gør at det kun er een tråd der har adgang til en variable eller metode af gangen. Alternativt kan man også bruge lock for at låse den del af metoden
+//  (eller hele metoden) som man vil have at kun een tråd har adgang til af gangen. 
+//
+//  Explain about deadlocks, how to detect them and ways to solve the Deadlock Problem
+//  Deadlocks er når tråde der kræver adgang til metoder som andre tråde har låst og derfor ikke kan tilgå dem. Hvis man f.eks. har to tråde kører metoder (som de hver især har låst)
+//  så skal have adgang til den anden tråds metode. på den måde låser de for hinanden.
+//
+//  Der er umiddelbart flere muligheder for at fjerne deadlocks på.
+//  - En er at stoppe alle tråde.
+//  - Man kan også stoppe én tråd af gangen og se om det hjælper.
+//
+
+
